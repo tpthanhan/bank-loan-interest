@@ -29,4 +29,7 @@ jobs:
 
       # Step 4: Build the application
       - name: Build and deploy the React app to github io
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
         run: npm run deploy
